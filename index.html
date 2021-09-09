@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Toy Tale</title>
     <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" src="src/index.js"></script>
   </head>
   <body>
     <div id="toy-header">
@@ -14,7 +15,7 @@
     </div>
 
     <div class="container">
-      <form class="add-toy-form">
+      <form class="add-toy-form" onsubmit="event.preventDefault(); addToyFromForm();" >
         <h3>Create a toy!</h3>
 
         <input
@@ -23,6 +24,7 @@
           value=""
           placeholder="Enter a toy's name..."
           class="input-text"
+          id="name"
         />
         <br />
         <input
@@ -31,6 +33,7 @@
           value=""
           placeholder="Enter a toy's image URL..."
           class="input-text"
+          id="image"
         />
         <br />
         <input
@@ -45,7 +48,9 @@
       Andy needs your help! <button id="new-toy-btn">Add a new toy!</button>
     </p>
 
-    <div id="toy-collection"></div>
-    <script type="text/javascript" src="src/index.js"></script>
+    <div id="toy-collection">
+
+    </div>
+    
   </body>
 </html>
